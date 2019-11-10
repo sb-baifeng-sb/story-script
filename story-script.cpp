@@ -168,13 +168,13 @@ Script::~Script() {
     clear();
 }
 
-void Script::load(ScriptData* data) {
+void Script::load(ScriptData const& data) {
     clear();
-    data->travel(std::bind(
+    data.travel(std::bind(
         &Script::onAdd, this,
         std::placeholders::_1, std::placeholders::_2, std::placeholders::_3)
     );
-    this->mName = data->getFileName();
+    this->mName = data.getFileName();
 }
 
 void Script::back(int step) {

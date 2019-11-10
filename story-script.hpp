@@ -47,7 +47,7 @@ public:
     Script();
     ~Script();
 public:
-    void load(ScriptData* data);
+    void load(ScriptData const& data);
 public:
     void back(int step = 1);
     void seek(std::string const& tag);
