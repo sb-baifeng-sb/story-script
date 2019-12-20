@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <assert.h>
+#include <list>
 #include "story-script.hpp"
 
 namespace story {
